@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+		
+	</head>
+	<body>
+		<label>学号</label>
+		<input type="number" id="n"/>
+		<label>姓名</label>
+		<input type="text" id="t" />
+		<input type="button" value="增加" onclick="add()" / >
+		<br />
+		<table border="1"  id="father">
+			<tr id="tr">
+				<td width="100px">学号</td>
+				<td width="100px">姓名</td>
+				<td><a>操作</a></td>
+			</tr>	
+		</table>
+		<script type="text/javascript">
+        	function add(){
+        		var tr=document.getElementById("father").insertRow();
+        		var td1=tr.insertCell();
+        		var td2=tr.insertCell();
+        		var td3=tr.insertCell();
+        		td1.innerHTML=document.getElementById("n").value;
+        		td2.innerHTML=document.getElementById("t").value;
+        		var s=document.createElement("input");
+        		td3.appendChild(s);
+        		s.setAttribute("type","button");
+        		s.setAttribute("value","删除");
+        		s.onclick=function(){
+        			this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
+        		}	
+        	}
+        </script>
+
+
+	</body>
+</html>
