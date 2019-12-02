@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style >
+		.h1{
+			font-size: 50px;
+		}
+		.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 8px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    float: right;
+}
+
+		.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+
+.button1:hover {
+    background-color: #008CBA;
+    color: white;
+}
+.button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f44336;
+}
+
+.button2:hover {
+    background-color: #f44336;
+    color: white;
+}
+.button3 {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.button3:hover {
+    background-color: #555555;
+    color: white;
+}
+		input.inputLine{
+    		width:226px;
+			padding: .375rem .75rem;
+			border-radius: .45rem;
+			border: 1px solid #ced4da;
+	}
+	input.inputLine:focus{
+		border-style:solid;
+		border-color: #03a9f4;
+		box-shadow: 0 0 5px #03a9f4;
+	}
+	.box11{
+		position: fixed;
+   left: 50%;
+   top: 50%;
+   margin: -150px 0 0 -150px;
+  
+   background-color: #CED4DA;
+	}
+
+	</style>
+	<body background="img/2501606_131646880000_2.jpg" style=" background-repeat:no-repeat ;background-size:100% 100%; background-attachment:fixed;" >
+	<h1 align="center" class="h1">智慧食堂</h1>
+	<div class="box11">
+		
+<form action="" name="myform">
+<table>
+<tr>
+<td>用户名：</td>
+<td><input type="text" id="user" class="inputLine"/></td>
+</tr>
+<tr>
+<td>密  码：</td>
+<td><input type="text" id="password" class="inputLine" /></td>
+</tr>
+<tr>
+<td>手机号：</td>
+<td align="left"><input type="text" size="5" id="code" class="inputLine" /></td>
+</tr>
+</table>
+</form>
+<table>
+<tr>
+<td>
+<button class="button button1"   onclick=myfun_submit() >提交</button>
+</td>
+<td>
+<button  class="button button2" onclick=myfun_reset() >重置</button>
+</td>
+<td>
+	<a href="new_file2.html"><button class="button button3"  >跳过</button></a>
+</td>
+<td>
+	<a href="new_file.html"><hutton class="button button3">订单</hutton></a>
+</td>
+</tr>
+</table>
+
+</div>
+<script type="text/javascript">
+function myfun_submit(){
+var user_val = document.getElementById("user").value;
+var password_val = document.getElementById("password").value;
+if(user_val==""){
+alert("用户名不能为空！！");
+}else if(password_val==""){
+alert("密码不能为空！！！");
+}
+}
+function myfun_reset(){
+document.getElementById("user").value = "";
+document.getElementById("password").value = "";
+document.getElementById("code").value = "";
+}
+</script>
+	</body>
+</html>

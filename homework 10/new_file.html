@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<div data-role="page">
+  <div data-role="header">
+    <h1>欢迎点餐</h1>
+  </div>
+  
+
+  <div data-role="main" class="ui-content">
+    <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">订单确认</a>
+
+    <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+      <form method="post" action="demoform.php">
+        <div>
+          <h3>订单信息</h3>
+          <label for="usrnm" class="ui-hidden-accessible">用户名:</label>
+          <input type="text" name="user" id="usrnm" placeholder="用户名">
+          <label for="pswd" class="ui-hidden-accessible">密码:</label>
+          
+          <input type="password" name="passw" id="pswd" placeholder="密码">
+          <label for="psio" class="ui-hidden-accessible">送餐地址：</label>
+           <input type="password" name="passw" id="pswd" placeholder="地址">
+            <div data-role="main" class="ui-content">
+    <form method="post" action="demoform.asp">
+      <fieldset data-role="fieldcontain">
+        <label for="day">选择食堂</label>
+        <select name="day" id="day" data-native-menu="false">
+         <option value="mon">琴湖食堂</option>
+         <option value="tue">公一食堂</option>
+         <option value="wed">雅园食堂</option>
+         <option value="thu">南苑师生食堂</option>
+         <option value="fri">北苑学生五食堂</option>
+         <option value="sat">乐园食堂</option>
+         <option value="sun">兴湘食堂</option>
+        </select>
+      </fieldset>
+      <label class="ui-hidden-accessible">编号</label>
+      <input type="password" name="passw" id="pswd" placeholder="菜品编号">
+    </form>
+  </div>
+          <label for="log">保存登录</label>
+          <input type="checkbox" name="login" id="log" value="1" data-mini="true">
+          <input type="submit" data-inline="true" value="确认">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div data-role="footer">
+  
+  </div>
+</div> 
+	</body>
+</html>
